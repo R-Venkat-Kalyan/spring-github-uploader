@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Upload Success</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+	<div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
+		<h1 class="text-2xl font-bold text-green-600 mb-4">🎉 Upload Successful!</h1>
+		<p class="text-gray-700 mb-4">Your resume has been uploaded to GitHub.</p>
+
+		<a th:href="@{'/view/' + ${fileName}}" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+			Download File
+		</a>
+
+
+		<a href="/" class="block mt-4 text-sm text-gray-600 hover:underline">Upload Another</a>
+	</div>
+
+</body>
+
+</html>
